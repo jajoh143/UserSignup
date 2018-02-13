@@ -4,23 +4,26 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using UserSignup.ApplicationContext;
 using UserSignup.Models;
 
 namespace UserSignup.Controllers
 {
     public class UserController : Controller
     {
-        private readonly IUserData _userData;
-
-        public UserController(IUserData userData)
+       
+        private readonly ApplicationDbContext _context;
+        public UserController(ApplicationDbContext context)
         {
-            _userData = userData;
+            _context = context;
         }
 
         public IActionResult Index(int id)
        {
-            var user = this._userData.Users.Where(x => x.UserId == id);
-            return View(user);
+            var users = this._context.Users;
+            ViewBag.Users = users;
+            return View();
        }
 
         [HttpGet]
@@ -32,11 +35,15 @@ namespace UserSignup.Controllers
         [HttpPost]
         public IActionResult Add([FromForm]UserPost user)
         {
-            if (user.Password == user.Verify && !String.IsNullOrEmpty(user.Username))
+            if (ModelState.IsValid)
             {
-                if (this._userData.Users.Count <= 0)
-                    
-                this._userData.AddUser((User)user);
+                var newUser = new User()
+                {
+                    Username = user.Username,
+                    Email = user.Email,
+                    Password = user.Password
+                };
+                this._context.Users.Add(newUser);
                 return RedirectToAction("Index",
                     new
                     {

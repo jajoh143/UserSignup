@@ -1,14 +1,9 @@
-﻿@model UserSignup.Models.User
-@{
+﻿@{
     ViewData["Title"] = "User Page";
 }
 <br />
-
-@if (String.IsNullOrEmpty(Model.Username))
+@foreach(var user in ViewBag.Users)
 {
-    <p>Please <a asp-area="" asp-controller="User" asp-action="Add">Sign up</a>.</p>
-}
-else
-{
-    <p>Welcome, @Model.Username!</p>
+    @user.Username 
+    @user.Email
 }

@@ -41,8 +41,7 @@ namespace UserSignup
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            ConsoleCancelEventArgs con
-
+            
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
@@ -51,6 +50,19 @@ namespace UserSignup
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        public static void AddTestData(ApplicationDbContext context)
+        {
+            var user1 = new User()
+            {
+                UserId = 1,
+                Username = "jajoh",
+                Email = "jajoh143@gmail.com",
+                Password = "password"
+            };
+            context.Users.Add(user1);
+            context.SaveChanges();
         }
     }
 }

@@ -11,7 +11,6 @@ namespace UserSignup.Models
         public int UserId { get; set; }
         [Display(Name = "Username")]
         [Required]
-        [RegularExpression(@"^[A - Z] +[a - zA - Z""'\s-]*$")]
         public string Username {get; set;}
         [Display(Name = "Email")]
         [Required]
@@ -19,11 +18,15 @@ namespace UserSignup.Models
         public string Email {get; set;}
         [Display(Name = "Password")]
         [Required]
+        [DataType(DataType.Password)]
         public string Password {get; set;}
     }
 
     public class UserPost : User
     {
+        [Compare("Password")]
+        [Display(Name = "Verify Password")]
+        [DataType(DataType.Password)]
         public string Verify { get; set; }
     }
 }

@@ -1,0 +1,11 @@
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.csproj.CoreCompileInputs.cache
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.AssemblyInfoInputs.cache
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.AssemblyInfo.cs
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.csprojResolveAssemblyReference.cache
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.deps.json
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.runtimeconfig.json
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.runtimeconfig.dev.json
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.dll
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\bin\Debug\netcoreapp2.0\UserSignup.pdb
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.dll
+C:\Users\jajoh\Desktop\team-assignments\jacob_johnson\UserSignup\obj\Debug\netcoreapp2.0\UserSignup.pdb
